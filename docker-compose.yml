@@ -10,7 +10,7 @@ services:
   app:
     image: node
     volumes:
-      - .:/app
+      - ./webserver.js:/app/webserver.js
     working_dir: /app
     environment:
       - API=10.10.17.117:5000
@@ -22,8 +22,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.api
-    environment:
-      - WORLD=andoitz
+    environment: [ WORLD=luis, OTRA=juan ]
+#      - WORLD=andoitz
     image: srlopez/nodeapi:1.0
     ports:
       - 5000:4000
