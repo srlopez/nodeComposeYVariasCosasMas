@@ -1,6 +1,6 @@
 FROM ubuntu
 RUN apt-get update && apt-get install -y \
     python3 
-COPY somefile.txt ./
-RUN cat /somefile.txt
+COPY hello.py ./
+RUN python3 /hello.py
 CMD [ "echo", "Hello World!" ]

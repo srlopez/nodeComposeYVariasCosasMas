@@ -1,3 +1,0 @@
-Saludos desde
-somefile
-y en ubuntu
