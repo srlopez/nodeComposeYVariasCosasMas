@@ -10,7 +10,8 @@ services:
   app:
     image: node
     volumes:
-      - ./webserver.js:/app/webserver.js
+#      - ./webserver.js:/app/webserver.js
+      - .:/app
     working_dir: /app
     environment:
       - API=10.10.17.117:5000
